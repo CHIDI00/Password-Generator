@@ -22,7 +22,13 @@ function generate() {
 
     result = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, lengthEl);
 }
-generatePassword()
+generate()
+
+function generatePassword(lower, upper, number, symbol) {
+    
+}
+
+
 
 function getRandomUpperCase() {
     return upperCase[Math.floor(Math.random() * upperCase.length)]
