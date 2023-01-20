@@ -1,48 +1,20 @@
-let lowerCase = 'abcdefghijklmnopqrstuvwxyz'
-let upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-let numbers = '0123456789'
-let symbols = '@#$&<>,./|{])(*%!'
-let length = 7
-
-const randFunc = {
-    lower: getRandomLowerCase,
-    upper: getRandomUpperCase,
-    numbers: getRandomNumbers,
-    symbols: getRandomSymbols
-}
-
-const result = ""
-
-function generate() {
-    const lengthEl = length
-    const hasLower = lowerCase
-    const hasUpper = upperCase
-    const hasNumber = numbers
-    const hasSymbol = symbols
-
-    result = generatePassword(hasLower, hasUpper, hasNumber, hasSymbol, lengthEl);
-}
-generate()
-
-function generatePassword(lower, upper, number, symbol) {
-    
-}
-
-
-
-function getRandomUpperCase() {
-    return upperCase[Math.floor(Math.random() * upperCase.length)]
-}
-
-function getRandomLowerCase() {
-    return lowerCase[Math.floor(Math.random() * lowerCase.length)]
-}
-
-function getRandomSymbols() {
-    return symbols[Math.floor(Math.random() * symbols.length)]
-}
-
-function getRandomNumbers() {
-    return numbers[Math.floor(Math.random() * numbers.length)]
-}
-console.log(getRandomSymbols() + getRandomLowerCase());
+function genr(len) {
+    var arr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+    var alen = arr.length;
+    var pass = "";
+    for(var i=0; i<len; i++) {
+        pass += arr[Math.floor(Math.random()*alen)];
+    }
+    return pass;
+    }
+   function load() {
+        var len = 8
+        len = parseInt(len);
+        if(len > 7 && len <= 9) {
+            console.log(genr(len)); 
+        }
+        else {
+            console.log("The length must be between 8 and 32 !");
+        }
+    }
+    load()
