@@ -1,5 +1,5 @@
 function genr(len) {
-    var arr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~";
+    var arr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&'()?@";
     var alen = arr.length;
     var pass = "";
     for(var i=0; i<len; i++) {
@@ -8,10 +8,10 @@ function genr(len) {
     return pass;
     }
    function load() {
-        var len = 8
+        var len = 7
         len = parseInt(len);
-        if(len > 7 && len <= 9) {
-            console.log(genr(len)); 
+        if(len => 7 && len <= 9) {
+            console.log('p' + genr(len)); 
         }
         else {
             console.log("The length must be between 8 and 32 !");
