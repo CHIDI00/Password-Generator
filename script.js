@@ -1,5 +1,5 @@
 function genr(len) {
-    var arr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()?@";
+    var arr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&()";
     var alen = arr.length;
     var pass = "";
     for(var i=0; i<len; i++) {
